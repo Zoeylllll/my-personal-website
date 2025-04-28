@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, request, render_template, redirect
 import json
 import os
 
@@ -30,6 +30,3 @@ def message():
         save_messages(messages)
         return redirect('/message')
     return render_template('message.html', messages=messages)
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
