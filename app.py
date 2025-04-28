@@ -30,3 +30,7 @@ def message():
         save_messages(messages)
         return redirect('/message')
     return render_template('message.html', messages=messages)
+
+def run():
+    app.run(host="0.0.0.0", port=5000)
+
